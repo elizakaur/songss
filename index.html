@@ -93,23 +93,7 @@
         currentImageIndex = (currentImageIndex + 1) % images.length;
       }
 
-      // Call the function initially
-      changeBackgroundImage();
-
-      // Set interval to change the image every 5 seconds (7000 milliseconds)
-      setInterval(changeBackgroundImage, 7000);
-
-      // Hide the welcome overlay after the animation is complete
-      const welcomeOverlay = document.querySelector(".welcome-overlay");
-      setTimeout(function () {
-        welcomeOverlay.classList.add("hidden");
-      }, 7000); // Adjust the time (in milliseconds) to match the duration of your animation
-    });
-  </script>
-
-  <script>
-    // Your existing JavaScript code...
-  </script>
+     
 
 </body>
 </html>
