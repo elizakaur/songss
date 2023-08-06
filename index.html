@@ -6,45 +6,7 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    body, html {
-      font-family: 'Chivo Mono', monospace;
-      font-size: 1.8rem; /* 18px */
-      font-weight: 400;
-      line-height: 1.4;
-      color: var(--main-white);
-      height: 60%;
-      min-height: 100%;
-      margin: 0;
-    }
-
-    /* Add your custom properties/variables and other CSS styles here... */
-
-    /* Welcome section */
-    .welcome-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100vh;
-      background-color: #000;
-      background-image: linear-gradient(62deg, #754632 0%, #422214 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .welcome-section > p {
-      font-size: 3rem;
-      font-weight: 200;
-      font-style: italic;
-      color: var(--main-blue);
-    }
-
-    /* Projects section */
-    /* Add your projects section styles here... */
-
-    /* Contact section */
-    /* Add your contact section styles here... */
+    /* Your existing CSS styles... */
 
     /* Full-screen overlay */
     .welcome-overlay {
@@ -52,7 +14,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: rgba(0, 0, 0, 0.8); /* Adjust the transparency as needed */
       display: flex;
       justify-content: center;
@@ -74,6 +36,22 @@
     .welcome-overlay.hidden {
       display: none;
     }
+  </style>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect">
+
+  <style>
+    /* Your existing CSS styles... */
+
+    /* Set a fixed height for the .bcg div */
+    .bcg {
+      height: 500vh; /* Adjust the height as needed to fit the screen */
+      overflow-y: visible;
+      background-position: center top; /* Position the background image at the top center */
+      background-size: cover; /* Make the image cover the entire container */
+    }
+
   </style>
 
   <script>
@@ -116,14 +94,47 @@
     </div>
   </div>
 
-  <!-- ... (existing code) ... -->
-
   <section role="main" class="scroll-container" id="skrollr-body">
-    <!-- ... (existing code) ... -->
+    <section id="slide-1" class="homeSlide">
+      <div class="bcg" data-center="background-position: 100% 0px;" data-top-bottom="background-position: 100% -100px;" data-anchor-target="#slide-1">
+        <div class="hsContainer">
+          <div class="hsContent" data-center="opacity: 1" data-top="opacity: 0" data-anchor-target="#slide-1 h2">
+            <!-- Div for each song -->
+            <div class="song">
+              <p><strong></strong> Faasle by Aaditya Raikhari</p>
+              <iframe src="https://archive.org/embed/aditya-rikhari-faasle" width="500" height="60" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+            </div>
+            <div class="song">
+              <p><strong></strong> Kyon-Papon Music</p>
+              <iframe src="https://archive.org/embed/kyon-official-video-barfi-pritam-7415-paponmusic-sunidhi-chauhan-ranbir-priyanka" width="500" height="60" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+            </div>
+            <div class="song">
+              <p><strong></strong> Khudaya Khair</p>
+              <iframe src="https://archive.org/embed/khudaya-khair" width="500" height="60" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+            </div>
+            <div class="song">
+              <p><strong></strong>Maast Magan</p>
+              <iframe src="https://archive.org/embed/mast-magan-full-video-song-2-states-arijit-singh-arjun-kapoor-alia-bhatt_20230806" width="500" height="60" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
   </section>
 
   <!-- ... (existing code) ... -->
 
-</body>
-</html>
+  <div class="welcome-overlay">
+    <div class="welcome-content">
+      <!-- Add your welcome animation here -->
+      <img src="https://i.pinimg.com/originals/1e/3e/37/1e3e3738d81b9db4f6b6505b236a996a.gif" alt="Welcome Animation">
+    </div>
+  </div>
 
+  <!-- ... (existing code) ... -->
+
+  <script>
+    // Hide the welcome overlay after the animation is complete
+    const welcomeOverlay = document.querySelector(".welcome-overlay");
+    setTimeout(function
